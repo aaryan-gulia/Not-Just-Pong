@@ -33,13 +33,13 @@ void Game::runGame() {
                 gameScreen.setDiff(startScreen.gameDiff);
             }
         }
-        if(gameState == Play){
+        else if(gameState == Play){
             gameScreen.draw();
             if(!gameScreen.handleInput()){
                 gameState = Pause;
             }
         }
-        if(gameState == Pause){
+        else if(gameState == Pause){
             pauseScreen.draw();
             if(!pauseScreen.handleInput()){
                 if(pauseScreen.state == "Restart"){

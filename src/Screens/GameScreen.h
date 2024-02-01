@@ -6,6 +6,7 @@ class GameScreen : public Screen {
 private:
     std::string gameDiff;
     float AI_accuracy;
+    int countDown = 4;
 public:
     Bat bat1, bat2;
     Ball ball;

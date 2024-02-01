@@ -10,8 +10,8 @@ Ball::Ball(float xPos, float yPos, float xSpeed, float ySpeed, int radius) {
     this->xSpeed = xSpeed;
     this->ySpeed = ySpeed;
     this->radius = radius;
-    collisionSound = LoadSound("../sounds/sounds_ping_pong_8bit/ping_pong_8bit_plop.ogg");
-    exitScreenSound = LoadSound("../sounds/sounds_ping_pong_8bit/ping_pong_8bit_peeeeeep.ogg");
+    collisionSound = LoadSound("../sounds/Retro_Blop_22.wav");
+    exitScreenSound = LoadSound("../sounds/Retro_Negative_Short_23.wav");
 }
 
 void Ball::move() {
@@ -41,14 +41,16 @@ bool Ball::checkBatCollision(int batX, int batY, int batWidth, int batHeight, in
     else return false;
 }
 
-void Ball::checkWallCollision(int screenWidth, int screenHeight) {
+bool Ball::checkWallCollision(int screenWidth, int screenHeight) {
     if(yPos - radius <= 0 || yPos + radius >= screenHeight){
         ySpeed = -ySpeed;
     }
     if(xPos - radius <= 0 || xPos + radius >= screenWidth){
         PlaySound(exitScreenSound);
         reset(screenWidth, screenHeight);
+        return true;
     }
+    return false;
 }
 
 void Ball::draw() {

@@ -20,7 +20,7 @@ public:
     void draw();
     void reset(int screenWidth, int screenHeight);
     bool checkBatCollision(int batX, int batY, int batWidth, int batHeight, int player);
-    void checkWallCollision(int screenWidth, int screenHeight);
+    bool checkWallCollision(int screenWidth, int screenHeight);
     float getXPos();
     float getYPos();
     int getRadius();
