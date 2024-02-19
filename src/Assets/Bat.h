@@ -8,7 +8,7 @@
 #include "string"
 
 class Bat {
-private:
+protected:
     float xPos, yPos;
     float speed;
     int width, height;
@@ -16,8 +16,8 @@ private:
 
 public:
     Bat(float xPos, float yPos, float speed, int width, int height);
-    void moveUp();
-    void moveDown();
+    void virtual moveUp();
+    void virtual moveDown();
     void virtual handleInput(int player);
     void draw();
     void reset();
@@ -25,6 +25,9 @@ public:
     float getYPos();
     int getWidth();
     int getHeight();
+    void setXPos(float xPos);
+    void setYPos(float yPos);
+    void setScore(int score);
     int getScore();
     void incrementScore();
     void AI(int ballYPos, int ballXPos, float accuracy);

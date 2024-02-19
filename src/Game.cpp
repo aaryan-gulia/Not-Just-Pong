@@ -1,9 +1,7 @@
 //
 // Created by Aaryan Gulia on 31/01/2024.
 //
-#include "iostream"
 #include "Game.h"
-#include "Screens/PauseScreen.h"
 
 
 Game::Game() {
@@ -21,7 +19,7 @@ Game::Game() {
 
 void Game::runGame() {
     StartScreen startScreen(width,height,FPS,title);
-    GameScreen gameScreen(width,height,FPS,title);
+    GameScreenOnline gameScreen(width,height,FPS,title);
     PauseScreen pauseScreen(width,height,FPS,title);
     while(!WindowShouldClose()){
         BeginDrawing();

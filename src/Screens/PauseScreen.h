@@ -4,7 +4,8 @@
 
 #ifndef PRISON_AURELIUS_PAUSESCREEN_H
 #define PRISON_AURELIUS_PAUSESCREEN_H
-#include "GameScreen.h"
+#include "vector"
+#include "OnlineSrc/GameScreen.h"
 
 class PauseScreen: public Screen{
 private:

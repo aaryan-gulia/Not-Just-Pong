@@ -3,6 +3,22 @@
 //
 #include "iostream"
 #include "Ball.h"
+#include <mach-o/dyld.h>
+#include <libgen.h>
+#include <CoreFoundation/CoreFoundation.h>
+
+std::string getExecutablePath() {
+    CFURLRef bundleURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFStringRef bundlePathString = CFURLCopyFileSystemPath(bundleURL, kCFURLPOSIXPathStyle);
+    CFRelease(bundleURL);
+
+    const char *bundlePathCString = CFStringGetCStringPtr(bundlePathString, kCFStringEncodingUTF8);
+    std::string bundlePath(bundlePathCString);
+
+    CFRelease(bundlePathString);
+
+    return bundlePath;
+}
 
 Ball::Ball(float xPos, float yPos, float xSpeed, float ySpeed, int radius) {
     this->xPos = xPos;
@@ -10,8 +26,11 @@ Ball::Ball(float xPos, float yPos, float xSpeed, float ySpeed, int radius) {
     this->xSpeed = xSpeed;
     this->ySpeed = ySpeed;
     this->radius = radius;
-    collisionSound = LoadSound("../sounds/Retro_Blop_22.wav");
-    exitScreenSound = LoadSound("../sounds/Retro_Negative_Short_23.wav");
+    std::string path = getExecutablePath() + "/sounds/Retro_Blop_22.wav";
+    std::cout << path << std::endl;
+    collisionSound = LoadSound(path.c_str());
+    path = getExecutablePath() + "/sounds/Retro_Negative_Short_23.wav";
+    exitScreenSound = LoadSound(path.c_str());
 }
 
 void Ball::move() {
@@ -74,4 +93,11 @@ float Ball::getXSpeed() {
 }
 float Ball::getYSpeed() {
     return ySpeed;
+}
+
+void Ball::setXPos(float xPos) {
+    this->xPos = xPos;
+}
+void Ball::setYPos(float yPos) {
+    this->yPos = yPos;
 }

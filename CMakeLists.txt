@@ -22,12 +22,36 @@ file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/s
 set(PROJECT_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/src/") # Define PROJECT_INCLUDE to be the path to the include directory of the project
 
 # Declaring our executable
-add_executable(${PROJECT_NAME} pong.cpp
-        src/Game.cpp)
+add_executable(${PROJECT_NAME} Pong.cpp
+        src/Game.cpp
+        src/Screens/MainMenuScreen.h
+        src/Screens/MainMenuScreen.h
+        src/server/Server.h
+        src/server/ClientSession.cpp
+        src/server/serverMain.cpp
+        src/server/net_common.h
+        src/server/Message.h
+        src/server/Connection.h
+        src/server/TsQueue.h
+        src/server/Client.h
+        src/server/olc_net.h
+        src/onlineSrc/Bat.h
+        src/onlineSrc/ServerGame.h
+        src/onlineSrc/GameScreen.h
+        src/GameOnline.h
+        src/onlineSrc/Ball.h
+        src/testing/OnlineTest.cpp)
 
+add_executable(server ServerMain.cpp)
+
+add_library(asio INTERFACE)
+include_directories(${PROJECT_SOURCE_DIR}/include/asio/include)
 target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCES})
-target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_INCLUDE} ${CMAKE_SOURCE_DIR}/src)
-target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
+target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_INCLUDE} ${CMAKE_SOURCE_DIR}/src asio INTERFACE ${PROJECT_SOURCE_DIR}/include/asio/include)
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib asio INTERFACE <threads>)
+target_sources(server PRIVATE ${PROJECT_SOURCES})
+target_include_directories(server PRIVATE ${PROJECT_INCLUDE} ${CMAKE_SOURCE_DIR}/src asio INTERFACE ${PROJECT_SOURCE_DIR}/include/asio/include)
+target_link_libraries(server PRIVATE raylib asio INTERFACE <threads>)
 
 # Setting ASSETS_PATH
 target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/assets/") # Set the asset path macro to the absolute path on the dev machine
