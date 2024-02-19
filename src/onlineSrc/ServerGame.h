@@ -22,44 +22,41 @@ public:
     float ballYPos = 0;
     int p1Score = 0;
     int p2Score = 0;
-
+    int p2Counter = 0;
+    int p1Counter = 0;
 
     void OnMessage(std::shared_ptr<olc::net::connection<CustomMsgTypes>> client, olc::net::message<CustomMsgTypes>& msg) override {
-        if (msg.header.id == CustomMsgTypes::Ready) {
+        if(msg.header.id == CustomMsgTypes::move){
+            int player;
+            msg >> player;
+            olc::net::message<CustomMsgTypes> gameState;
+
+            if (player == 2) {
+                msg >> ballYPos>>ballXPos>>p1Score>>p2Score;
+                msg>>bat2YPos;
+                gameState.header.id = CustomMsgTypes::UpdateScreen;
+                gameState<<bat2YPos<<p1Score<<p2Score<<ballXPos<<ballYPos<<player;
+            } else if(player == 1) {
+                msg>>bat1YPos;
+                gameState.header.id = CustomMsgTypes::UpdateScreen;
+                gameState<<bat1YPos<<player;
+            }
+            m_qMessagesIn.clear();
+            //std::cout << "sends to p1: " << p2Counter << ", sends to p2 " << p1Counter << std::endl;
+            for_each(m_deqConnections.begin(), m_deqConnections.end(), [&](std::shared_ptr<olc::net::connection<CustomMsgTypes>> conn) {
+                if (conn != client) {
+                    conn->Send(gameState);
+                }
+            });
+            return;
+        }
+        else if (msg.header.id == CustomMsgTypes::Ready) {
             olc::net::message<CustomMsgTypes> gameState;
             gameState.header.id = CustomMsgTypes::Wait;
             gameState << bat1YPos << bat2YPos << ballXPos << ballYPos;
             MessageAllClients(gameState);
             return;
 
-        } else if(msg.header.id == CustomMsgTypes::move){
-            int player;
-            float batPos;
-            msg >> player;
-            olc::net::message<CustomMsgTypes> gameState;
-
-            if (player == 2) {
-                msg >> ballYPos>>ballXPos>>p1Score>>p2Score>>batPos;
-                bat2YPos = batPos;
-                gameState.header.id = CustomMsgTypes::UpdateScreen;
-                gameState<<bat2YPos<<p1Score<<p2Score<<ballXPos<<ballYPos<<player;
-                for_each(m_deqConnections.begin(), m_deqConnections.end(), [&](std::shared_ptr<olc::net::connection<CustomMsgTypes>> conn) {
-                    if (conn != client) {
-                        conn->Send(gameState);
-                    }
-                });
-            } else if(player == 1) {
-                msg>>batPos;
-                bat1YPos = batPos;
-                gameState.header.id = CustomMsgTypes::UpdateScreen;
-                gameState<<bat1YPos<<player;
-                for_each(m_deqConnections.begin(), m_deqConnections.end(), [&](std::shared_ptr<olc::net::connection<CustomMsgTypes>> conn) {
-                    if (conn != client) {
-                        conn->Send(gameState);
-                    }
-                });
-            }
-            return;
         }
         else if (msg.header.id == CustomMsgTypes::LookForGames) {
             std::cout << "Client looking for games" << std::endl;

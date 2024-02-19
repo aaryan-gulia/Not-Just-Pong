@@ -54,6 +54,19 @@ public:
     }
 
     bool handleInput() override {
+        if(playerNum == 2){
+            if(ball.checkBatCollision(bat1Online.getXPos(), bat1Online.getYPos(), bat1Online.getWidth(), bat1Online.getHeight(),1)){
+                bat1Online.incrementScore();
+            }
+            if(ball.checkBatCollision(bat2Online.getXPos(), bat2Online.getYPos(), bat2Online.getWidth(), bat2Online.getHeight(),2)){
+                bat2Online.incrementScore();
+            }
+            if(ball.checkWallCollision(width, height)){
+                ball.move();
+                countDown = 4;
+            }
+            ball.move();
+        }
         olc::net::message<CustomMsgTypes> msg;
         msg.header.id = CustomMsgTypes::move;
         float batPos = playerNum == 1? bat1Online.getYPos() : bat2Online.getYPos();
@@ -80,30 +93,20 @@ public:
         auto serverMsg = playerNum == 1? bat1Online.Incoming().pop_front().msg : bat2Online.Incoming().pop_front().msg;
         int serverPlayerNum;
         serverMsg >> serverPlayerNum;
-        if(playerNum == 1 && serverPlayerNum == 2){
+        if(serverPlayerNum == 2){
+            bat1Online.m_qMessagesIn.clear();
             float ballXPos, ballYPos;
             int p1_score, p2_score;
-            serverMsg >>ballYPos>>ballXPos>>p2_score>>p1_score>>batPos;
+            serverMsg >>ballYPos>>ballXPos>>p1_score>>p2_score>>batPos;
             bat2Online.setYPos(batPos);
             bat1Online.setScore(p1_score);
             bat2Online.setScore(p2_score);
             ball.setXPos(ballXPos);
             ball.setYPos(ballYPos);
-        }else if(playerNum == 2 && serverPlayerNum == 1){
-
+        }else if(serverPlayerNum == 1){
+            bat2Online.m_qMessagesIn.clear();
             serverMsg>>batPos;
             bat1Online.setYPos(batPos);
-            if(ball.checkBatCollision(bat1Online.getXPos(), bat1Online.getYPos(), bat1Online.getWidth(), bat1Online.getHeight(),1)){
-                bat1Online.incrementScore();
-            }
-            if(ball.checkBatCollision(bat2Online.getXPos(), bat2Online.getYPos(), bat2Online.getWidth(), bat2Online.getHeight(),2)){
-                bat2Online.incrementScore();
-            }
-            if(ball.checkWallCollision(width, height)){
-                ball.move();
-                countDown = 4;
-            }
-            ball.move();
         }
         if(IsKeyPressed(KEY_P)){
             return false;

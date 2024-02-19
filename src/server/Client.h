@@ -101,7 +101,7 @@ namespace olc
             // The client has a single instance of a "connection" object, which handles data transfer
             std::unique_ptr<connection<T>> m_connection;
 
-        private:
+        public:
             // This is the thread safe queue of incoming messages from server
             tsqueue<owned_message<T>> m_qMessagesIn;
         };

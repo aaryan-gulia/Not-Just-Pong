@@ -19,7 +19,7 @@ Game::Game() {
 
 void Game::runGame() {
     StartScreen startScreen(width,height,FPS,title);
-    GameScreenOnline gameScreen(width,height,FPS,title);
+    GameScreen gameScreen(width,height,FPS,title);
     PauseScreen pauseScreen(width,height,FPS,title);
     while(!WindowShouldClose()){
         BeginDrawing();
