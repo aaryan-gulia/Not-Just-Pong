@@ -5,8 +5,11 @@
 #ifndef PRISON_AURELIUS_GAME_H
 #define PRISON_AURELIUS_GAME_H
 #include "raylib.h"
+#include "iostream"
+#include "Screens/PauseScreen.h"
 
 class Game {
+protected:
     enum GameState{
         Menu = 0,
         Play = 1,
@@ -18,7 +21,7 @@ class Game {
     const char* title;
 public:
     Game();
-    void runGame();
+    void virtual runGame();
     ~Game(){
         CloseWindow();
     }

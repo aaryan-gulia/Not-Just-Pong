@@ -3,6 +3,22 @@
 //
 #include "iostream"
 #include "Ball.h"
+#include <mach-o/dyld.h>
+#include <libgen.h>
+#include <CoreFoundation/CoreFoundation.h>
+
+std::string getExecutablePath() {
+    CFURLRef bundleURL = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    CFStringRef bundlePathString = CFURLCopyFileSystemPath(bundleURL, kCFURLPOSIXPathStyle);
+    CFRelease(bundleURL);
+
+    const char *bundlePathCString = CFStringGetCStringPtr(bundlePathString, kCFStringEncodingUTF8);
+    std::string bundlePath(bundlePathCString);
+
+    CFRelease(bundlePathString);
+
+    return bundlePath;
+}
 
 Ball::Ball(float xPos, float yPos, float xSpeed, float ySpeed, int radius) {
     this->xPos = xPos;
@@ -10,8 +26,11 @@ Ball::Ball(float xPos, float yPos, float xSpeed, float ySpeed, int radius) {
     this->xSpeed = xSpeed;
     this->ySpeed = ySpeed;
     this->radius = radius;
-    collisionSound = LoadSound("../sounds/Retro_Blop_22.wav");
-    exitScreenSound = LoadSound("../sounds/Retro_Negative_Short_23.wav");
+    std::string path = getExecutablePath() + "/sounds/Retro_Blop_22.wav";
+    std::cout << path << std::endl;
+    collisionSound = LoadSound(path.c_str());
+    path = getExecutablePath() + "/sounds/Retro_Negative_Short_23.wav";
+    exitScreenSound = LoadSound(path.c_str());
 }
 
 void Ball::move() {
@@ -29,13 +48,13 @@ bool Ball::checkBatCollision(int batX, int batY, int batWidth, int batHeight, in
     if(player == 1 && xPos - radius <= batX + batWidth && yPos >= batY && yPos <= batY + batHeight){
         xSpeed = -xSpeed;
         xPos = batX + batWidth + radius + 1; // Add offset to the ball's position
-        PlaySound(collisionSound);
+        //PlaySound(collisionSound);
         return true;
     }
     if(player == 2 && xPos + radius >= batX && yPos >= batY && yPos <= batY + batHeight){
         xSpeed = -xSpeed;
         xPos = batX - radius - 1; // Add offset to the ball's position
-        PlaySound(collisionSound);
+        //PlaySound(collisionSound);
         return true;
     }
     else return false;
@@ -46,7 +65,7 @@ bool Ball::checkWallCollision(int screenWidth, int screenHeight) {
         ySpeed = -ySpeed;
     }
     if(xPos - radius <= 0 || xPos + radius >= screenWidth){
-        PlaySound(exitScreenSound);
+        //PlaySound(exitScreenSound);
         reset(screenWidth, screenHeight);
         return true;
     }
@@ -74,4 +93,11 @@ float Ball::getXSpeed() {
 }
 float Ball::getYSpeed() {
     return ySpeed;
+}
+
+void Ball::setXPos(float xPos) {
+    this->xPos = xPos;
+}
+void Ball::setYPos(float yPos) {
+    this->yPos = yPos;
 }

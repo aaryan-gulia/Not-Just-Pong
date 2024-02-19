@@ -83,3 +83,13 @@ void Bat::reset() {
     yPos = GetScreenHeight()/2 - height/2;
     score = 0;
 }
+
+void Bat::setXPos(float xPos) {
+    this->xPos = xPos;
+}
+void Bat::setYPos(float yPos) {
+    this->yPos = yPos;
+}
+void Bat::setScore(int score) {
+    this->score = score;
+}
