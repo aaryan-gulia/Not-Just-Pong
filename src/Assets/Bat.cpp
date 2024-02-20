@@ -56,6 +56,21 @@ void Bat::AI(int ballYPos, int ballXPos, float accuracy) {
     }
 }
 
+//void Bat::setupOnlineBat() {
+//    this->Connect("localhost", 60000);
+//}
+//void Bat::disconnectOnlineBat() {
+//    if (IsConnected()) {
+//        // Send a ClientQuit message to the server
+//        olc::net::message<CustomMsgTypes> msg;
+//        msg.header.id = CustomMsgTypes::Quit;
+//        Send(msg);
+//
+//        // Disconnect from the server
+//        Disconnect();
+//    }
+//}
+
 void Bat::incrementScore() {
     score++;
 }
