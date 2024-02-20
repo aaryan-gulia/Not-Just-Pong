@@ -6,8 +6,21 @@
 #define PRISON_AURELIUS_BAT_H
 #include "raylib.h"
 #include "string"
+//#include "server/Client.h"
 
-class Bat {
+//enum class CustomMsgTypes : uint32_t
+//{
+//    move,
+//    UpdateScreen,
+//    LookForGames,
+//    MakeNewGame,
+//    JoinGame,
+//    Ready,
+//    Wait,
+//    Quit
+//};
+
+class Bat /*: public olc::net::client_interface<CustomMsgTypes>*/{
 protected:
     float xPos, yPos;
     float speed;
@@ -19,6 +32,9 @@ public:
     void virtual moveUp();
     void virtual moveDown();
     void virtual handleInput(int player);
+    void handleOnlineInput();
+    void setupOnlineBat();
+    void disconnectOnlineBat();
     void draw();
     void reset();
     float getXPos();

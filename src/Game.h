@@ -10,11 +10,6 @@
 
 class Game {
 protected:
-    enum GameState{
-        Menu = 0,
-        Play = 1,
-        Pause = 2
-    }gameState;
     int width;
     int height;
     int FPS;

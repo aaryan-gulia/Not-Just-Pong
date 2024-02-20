@@ -13,45 +13,38 @@ Game::Game() {
     InitWindow(width, height, title);
     InitAudioDevice();
     SetTargetFPS(30);
-    gameState = Menu;
+    gameState = MainMenu;
 
 }
 
 void Game::runGame() {
+    MainMenuScreen mainMenuScreen(width,height,FPS,title);
     StartScreen startScreen(width,height,FPS,title);
     GameScreen gameScreen(width,height,FPS,title);
     PauseScreen pauseScreen(width,height,FPS,title);
     while(!WindowShouldClose()){
         BeginDrawing();
         ClearBackground(WHITE);
-        if(gameState == Menu){
-            startScreen.draw();
-            if(!startScreen.handleInput()){
-                gameState = Play;
-                gameScreen.setDiff(startScreen.gameDiff);
-            }
-        }
-        else if(gameState == Play){
+
+        if(gameState == Play){
+            gameScreen.handleInput();
             gameScreen.draw();
-            if(!gameScreen.handleInput()){
-                gameState = Pause;
-            }
         }
         else if(gameState == Pause){
+            pauseScreen.handleInput();
             pauseScreen.draw();
-            if(!pauseScreen.handleInput()){
-                if(pauseScreen.state == "Restart"){
-                    gameScreen.reset();
-                    gameState = Menu;
-                }
-                else if(pauseScreen.state == "Menu"){
-                    gameState = Menu;
-                }
-                else if(pauseScreen.state == "Play"){
-                    gameState = Play;
-                }
+        }
+        else{
+            mainMenuScreen.handleInput();
+            mainMenuScreen.draw();
+            if(gameState == Play){
+                gameScreen.setGame();
+            }
+            else if(gameState == Exit){
+                break;
             }
         }
+
         EndDrawing();
     }
 }

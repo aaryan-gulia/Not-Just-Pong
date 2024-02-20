@@ -40,7 +40,9 @@ add_executable(${PROJECT_NAME} Pong.cpp
         src/onlineSrc/GameScreen.h
         src/GameOnline.h
         src/onlineSrc/Ball.h
-        src/testing/OnlineTest.cpp)
+        src/testing/OnlineTest.cpp
+        src/Assets/GameState.h
+        src/Assets/GameState.cpp)
 
 add_executable(server ServerMain.cpp)
 

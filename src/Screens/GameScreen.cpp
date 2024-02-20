@@ -3,6 +3,7 @@
 //
 
 #include "GameScreen.h"
+#include <iostream>
 #include <thread>
 #include <chrono>
 
@@ -15,7 +16,7 @@ bool GameScreen::handleInput() {
     // Handle user input for the game
     if(countDown>0){return true;}
     bat1.handleInput(1);
-    bat2.AI(ball.getYPos(), ball.getXPos(),AI_accuracy);
+    gameMode == AI? bat2.AI(ball.getYPos(), ball.getXPos(),AI_accuracy): bat2.handleInput(2);
     if(ball.checkBatCollision(bat1.getXPos(), bat1.getYPos(), bat1.getWidth(), bat1.getHeight(),1)){
         bat1.incrementScore();
     }
@@ -35,28 +36,57 @@ bool GameScreen::handleInput() {
     return true;
 }
 
-void GameScreen::setDiff(std::string diff) {
-    gameDiff = diff;
-
+void GameScreen::setGame() {
+    std::cout<<"Setting Game With "<< getGameMode()<<" Mode, "<<getGameSpeed()<<" Speed, "<<getAIDifficulty()<<" Difficulty"<<std::endl;
     int ballSpeed;
-    if(diff == "Easy"){
-        ballSpeed = 10;
-        AI_accuracy = 0.3;
-    }
-    else if(diff == "Medium"){
-        ballSpeed = 15;
-        AI_accuracy = 0.5;
-    }
-    else if(diff == "Hard"){
-        ballSpeed = 20;
-        AI_accuracy = 0.75;
-    }
-    else if(diff == "Brutal"){
-        ballSpeed = 25;
-        AI_accuracy = 0.9;
+    switch (getGameSpeed()) {
+        case Slow:{
+            ballSpeed = 10;
+            break;
+        }
+        case Medium:{
+            ballSpeed = 15;
+            break;
+        }
+        case Fast:{
+            ballSpeed = 20;
+            break;
+        }
+        case Insane:{
+            ballSpeed = 25;
+            std::cout<<"Setting Insane Speed"<<std::endl;
+            break;
+
+        }
     }
     ball.setXSpeed(ballSpeed);
     ball.setYSpeed(ballSpeed);
+
+    if(getGameMode() == AI){
+        switch (getAIDifficulty()) {
+            case Easy: {
+                AI_accuracy = 0.3;
+                break;
+            }
+            case Med: {
+                AI_accuracy = 0.5;
+                break;
+            }
+            case Hard: {
+                AI_accuracy = 0.7;
+                break;
+            }
+            case Brutal: {
+                AI_accuracy = 0.9;
+                std::cout<<"Setting Brutal AI"<<std::endl;
+                break;
+            }
+        }
+    }
+//    else if(getGameMode() == Online){
+//        if(onlineState == Host){bat1.setupOnlineBat();}
+//        else if(onlineState == Join){bat2.setupOnlineBat();}
+//    }
 }
 
 void GameScreen::draw() {

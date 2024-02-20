@@ -12,6 +12,7 @@ public:
     Ball ball;
     GameScreen(int screenWidth, int screenHeight,int screenFPS, const char* title);
     void setDiff(std::string diff);
+    void setGame();
     bool virtual handleInput();
     void virtual draw();
     void reset();
