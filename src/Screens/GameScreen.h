@@ -11,9 +11,12 @@ public:
     Bat bat1, bat2;
     Ball ball;
     GameScreen(int screenWidth, int screenHeight,int screenFPS, const char* title);
+    ~GameScreen();
     void setDiff(std::string diff);
     void setGame();
     bool virtual handleInput();
+    bool handleOnlineInput();
     void virtual draw();
+    void draw(std::string state);
     void reset();
 };

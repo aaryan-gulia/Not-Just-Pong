@@ -48,13 +48,13 @@ bool Ball::checkBatCollision(int batX, int batY, int batWidth, int batHeight, in
     if(player == 1 && xPos - radius <= batX + batWidth && yPos >= batY && yPos <= batY + batHeight){
         xSpeed = -xSpeed;
         xPos = batX + batWidth + radius + 1; // Add offset to the ball's position
-        //PlaySound(collisionSound);
+        PlaySound(collisionSound);
         return true;
     }
     if(player == 2 && xPos + radius >= batX && yPos >= batY && yPos <= batY + batHeight){
         xSpeed = -xSpeed;
         xPos = batX - radius - 1; // Add offset to the ball's position
-        //PlaySound(collisionSound);
+        PlaySound(collisionSound);
         return true;
     }
     else return false;
@@ -65,7 +65,7 @@ bool Ball::checkWallCollision(int screenWidth, int screenHeight) {
         ySpeed = -ySpeed;
     }
     if(xPos - radius <= 0 || xPos + radius >= screenWidth){
-        //PlaySound(exitScreenSound);
+        PlaySound(exitScreenSound);
         reset(screenWidth, screenHeight);
         return true;
     }

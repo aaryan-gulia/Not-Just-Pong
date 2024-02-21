@@ -5,12 +5,12 @@
 #ifndef PRISON_AURELIUS_PAUSESCREEN_H
 #define PRISON_AURELIUS_PAUSESCREEN_H
 #include "vector"
-#include "OnlineSrc/GameScreen.h"
+#include "GameScreen.h"
 
 class PauseScreen: public Screen{
 private:
     int selectedOption = 0;
-    std::vector<std::string> options = {"Resume", "Exit", "Adjust Difficulty"};
+    std::vector<std::string> options = {"Resume", "Exit"};
 
 public:
     std::string state;

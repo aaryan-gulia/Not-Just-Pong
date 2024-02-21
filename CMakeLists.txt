@@ -24,25 +24,16 @@ set(PROJECT_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/src/") # Define PROJECT_INCLUDE t
 # Declaring our executable
 add_executable(${PROJECT_NAME} Pong.cpp
         src/Game.cpp
-        src/Screens/MainMenuScreen.h
-        src/Screens/MainMenuScreen.h
-        src/server/Server.h
-        src/server/ClientSession.cpp
-        src/server/serverMain.cpp
-        src/server/net_common.h
-        src/server/Message.h
-        src/server/Connection.h
-        src/server/TsQueue.h
-        src/server/Client.h
-        src/server/olc_net.h
-        src/onlineSrc/Bat.h
-        src/onlineSrc/ServerGame.h
-        src/onlineSrc/GameScreen.h
-        src/GameOnline.h
-        src/onlineSrc/Ball.h
-        src/testing/OnlineTest.cpp
+        src/Screens/MainMenuScreen.cpp
+        src/Server/Client.h
         src/Assets/GameState.h
-        src/Assets/GameState.cpp)
+        src/Assets/GameState.cpp
+        src/Assets/Ball.cpp
+        src/Assets/Bat.cpp
+        src/Screens/GameScreen.cpp
+        src/Screens/PauseScreen.cpp
+        src/Screens/PauseScreen.cpp
+        src/Screens/StartScreen.cpp)
 
 add_executable(server ServerMain.cpp)
 

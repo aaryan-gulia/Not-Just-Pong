@@ -170,6 +170,7 @@ bool MainMenuScreen::handleInput() {
                         }
                         case 1:{
                             onlineState = Join;
+                            gameState = Play;
                             return false;
                         }
                         case 2:{

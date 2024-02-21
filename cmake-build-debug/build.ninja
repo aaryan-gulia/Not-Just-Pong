@@ -65,29 +65,13 @@ build CMakeFiles/Pong.dir/src/Game.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Us
   OBJECT_DIR = CMakeFiles/Pong.dir
   OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src
 
-build CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/ClientSession.cpp || cmake_object_order_depends_target_Pong
+build CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/MainMenuScreen.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o.d
+  DEP_FILE = CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o.d
   FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/server
-
-build CMakeFiles/Pong.dir/src/server/serverMain.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/serverMain.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/server/serverMain.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/server
-
-build CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/testing/OnlineTest.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/testing
+  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
 
 build CMakeFiles/Pong.dir/src/Assets/GameState.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Assets/GameState.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
@@ -113,25 +97,9 @@ build CMakeFiles/Pong.dir/src/Assets/Bat.cpp.o: CXX_COMPILER__Pong_unscanned_Deb
   OBJECT_DIR = CMakeFiles/Pong.dir
   OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Assets
 
-build CMakeFiles/Pong.dir/src/GameOnline.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/GameOnline.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/GameOnline.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src
-
 build CMakeFiles/Pong.dir/src/Screens/GameScreen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/GameScreen.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
   DEP_FILE = CMakeFiles/Pong.dir/src/Screens/GameScreen.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
-
-build CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/MainMenuScreen.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o.d
   FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles/Pong.dir
@@ -145,14 +113,6 @@ build CMakeFiles/Pong.dir/src/Screens/PauseScreen.cpp.o: CXX_COMPILER__Pong_unsc
   OBJECT_DIR = CMakeFiles/Pong.dir
   OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
 
-build CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/Screen.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
-
 build CMakeFiles/Pong.dir/src/Screens/StartScreen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/StartScreen.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
   DEP_FILE = CMakeFiles/Pong.dir/src/Screens/StartScreen.cpp.o.d
@@ -161,45 +121,21 @@ build CMakeFiles/Pong.dir/src/Screens/StartScreen.cpp.o: CXX_COMPILER__Pong_unsc
   OBJECT_DIR = CMakeFiles/Pong.dir
   OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
 
-build CMakeFiles/Pong.dir/src/onlineSrc/Ball.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/Ball.cpp || cmake_object_order_depends_target_Pong
+build CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/Screen.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/onlineSrc/Ball.cpp.o.d
+  DEP_FILE = CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o.d
   FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/onlineSrc
+  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/Screens
 
-build CMakeFiles/Pong.dir/src/onlineSrc/Bat.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/Bat.cpp || cmake_object_order_depends_target_Pong
+build CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/ClientSession.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/onlineSrc/Bat.cpp.o.d
+  DEP_FILE = CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o.d
   FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/onlineSrc
-
-build CMakeFiles/Pong.dir/src/onlineSrc/GameScreen.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/GameScreen.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/onlineSrc/GameScreen.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/onlineSrc
-
-build CMakeFiles/Pong.dir/src/onlineSrc/GameServer.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/GameServer.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/onlineSrc/GameServer.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/onlineSrc
-
-build CMakeFiles/Pong.dir/src/onlineSrc/ServerGame.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/ServerGame.cpp || cmake_object_order_depends_target_Pong
-  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Pong.dir/src/onlineSrc/ServerGame.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Pong.dir
-  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/onlineSrc
+  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/server
 
 build CMakeFiles/Pong.dir/src/server/Message.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/Message.cpp || cmake_object_order_depends_target_Pong
   DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
@@ -225,6 +161,22 @@ build CMakeFiles/Pong.dir/src/server/net_common.cpp.o: CXX_COMPILER__Pong_unscan
   OBJECT_DIR = CMakeFiles/Pong.dir
   OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/server
 
+build CMakeFiles/Pong.dir/src/server/serverMain.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/serverMain.cpp || cmake_object_order_depends_target_Pong
+  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Pong.dir/src/server/serverMain.cpp.o.d
+  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Pong.dir
+  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/server
+
+build CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o: CXX_COMPILER__Pong_unscanned_Debug /Users/aaryangulia/C++/Pong/src/testing/OnlineTest.cpp || cmake_object_order_depends_target_Pong
+  DEFINES = -DASSETS_PATH=\"/Users/aaryangulia/C++/Pong/assets/\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o.d
+  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Pong.dir
+  OBJECT_FILE_DIR = CMakeFiles/Pong.dir/src/testing
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Pong
@@ -233,7 +185,7 @@ build CMakeFiles/Pong.dir/src/server/net_common.cpp.o: CXX_COMPILER__Pong_unscan
 #############################################
 # Link the executable Pong
 
-build Pong: CXX_EXECUTABLE_LINKER__Pong_Debug CMakeFiles/Pong.dir/Pong.cpp.o CMakeFiles/Pong.dir/src/Game.cpp.o CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o CMakeFiles/Pong.dir/src/server/serverMain.cpp.o CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o CMakeFiles/Pong.dir/src/Assets/GameState.cpp.o CMakeFiles/Pong.dir/src/Assets/Ball.cpp.o CMakeFiles/Pong.dir/src/Assets/Bat.cpp.o CMakeFiles/Pong.dir/src/GameOnline.cpp.o CMakeFiles/Pong.dir/src/Screens/GameScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/PauseScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o CMakeFiles/Pong.dir/src/Screens/StartScreen.cpp.o CMakeFiles/Pong.dir/src/onlineSrc/Ball.cpp.o CMakeFiles/Pong.dir/src/onlineSrc/Bat.cpp.o CMakeFiles/Pong.dir/src/onlineSrc/GameScreen.cpp.o CMakeFiles/Pong.dir/src/onlineSrc/GameServer.cpp.o CMakeFiles/Pong.dir/src/onlineSrc/ServerGame.cpp.o CMakeFiles/Pong.dir/src/server/Message.cpp.o CMakeFiles/Pong.dir/src/server/Server.cpp.o CMakeFiles/Pong.dir/src/server/net_common.cpp.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
+build Pong: CXX_EXECUTABLE_LINKER__Pong_Debug CMakeFiles/Pong.dir/Pong.cpp.o CMakeFiles/Pong.dir/src/Game.cpp.o CMakeFiles/Pong.dir/src/Screens/MainMenuScreen.cpp.o CMakeFiles/Pong.dir/src/Assets/GameState.cpp.o CMakeFiles/Pong.dir/src/Assets/Ball.cpp.o CMakeFiles/Pong.dir/src/Assets/Bat.cpp.o CMakeFiles/Pong.dir/src/Screens/GameScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/PauseScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/StartScreen.cpp.o CMakeFiles/Pong.dir/src/Screens/Screen.cpp.o CMakeFiles/Pong.dir/src/server/ClientSession.cpp.o CMakeFiles/Pong.dir/src/server/Message.cpp.o CMakeFiles/Pong.dir/src/server/Server.cpp.o CMakeFiles/Pong.dir/src/server/net_common.cpp.o CMakeFiles/Pong.dir/src/server/serverMain.cpp.o CMakeFiles/Pong.dir/src/testing/OnlineTest.cpp.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -Xlinker -framework -Xlinker OpenGL  -framework Cocoa  -framework IOKit  -framework CoreFoundation
   OBJECT_DIR = CMakeFiles/Pong.dir
@@ -291,14 +243,6 @@ build CMakeFiles/server.dir/src/Game.cpp.o: CXX_COMPILER__server_unscanned_Debug
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/src
 
-build CMakeFiles/server.dir/src/GameOnline.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/GameOnline.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/GameOnline.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src
-
 build CMakeFiles/server.dir/src/Screens/GameScreen.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/Screens/GameScreen.cpp || cmake_object_order_depends_target_server
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
   DEP_FILE = CMakeFiles/server.dir/src/Screens/GameScreen.cpp.o.d
@@ -338,46 +282,6 @@ build CMakeFiles/server.dir/src/Screens/StartScreen.cpp.o: CXX_COMPILER__server_
   INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
   OBJECT_DIR = CMakeFiles/server.dir
   OBJECT_FILE_DIR = CMakeFiles/server.dir/src/Screens
-
-build CMakeFiles/server.dir/src/onlineSrc/Ball.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/Ball.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/onlineSrc/Ball.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src/onlineSrc
-
-build CMakeFiles/server.dir/src/onlineSrc/Bat.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/Bat.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/onlineSrc/Bat.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src/onlineSrc
-
-build CMakeFiles/server.dir/src/onlineSrc/GameScreen.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/GameScreen.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/onlineSrc/GameScreen.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src/onlineSrc
-
-build CMakeFiles/server.dir/src/onlineSrc/GameServer.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/GameServer.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/onlineSrc/GameServer.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src/onlineSrc
-
-build CMakeFiles/server.dir/src/onlineSrc/ServerGame.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/onlineSrc/ServerGame.cpp || cmake_object_order_depends_target_server
-  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/server.dir/src/onlineSrc/ServerGame.cpp.o.d
-  FLAGS = -g -std=gnu++20 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/aaryangulia/C++/Pong/include/asio/include -I/Users/aaryangulia/C++/Pong/src -I/Users/aaryangulia/C++/Pong/asio -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src -I/Users/aaryangulia/C++/Pong/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/server.dir
-  OBJECT_FILE_DIR = CMakeFiles/server.dir/src/onlineSrc
 
 build CMakeFiles/server.dir/src/server/ClientSession.cpp.o: CXX_COMPILER__server_unscanned_Debug /Users/aaryangulia/C++/Pong/src/server/ClientSession.cpp || cmake_object_order_depends_target_server
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
@@ -435,7 +339,7 @@ build CMakeFiles/server.dir/src/testing/OnlineTest.cpp.o: CXX_COMPILER__server_u
 #############################################
 # Link the executable server
 
-build server: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/ServerMain.cpp.o CMakeFiles/server.dir/src/Assets/Ball.cpp.o CMakeFiles/server.dir/src/Assets/Bat.cpp.o CMakeFiles/server.dir/src/Assets/GameState.cpp.o CMakeFiles/server.dir/src/Game.cpp.o CMakeFiles/server.dir/src/GameOnline.cpp.o CMakeFiles/server.dir/src/Screens/GameScreen.cpp.o CMakeFiles/server.dir/src/Screens/MainMenuScreen.cpp.o CMakeFiles/server.dir/src/Screens/PauseScreen.cpp.o CMakeFiles/server.dir/src/Screens/Screen.cpp.o CMakeFiles/server.dir/src/Screens/StartScreen.cpp.o CMakeFiles/server.dir/src/onlineSrc/Ball.cpp.o CMakeFiles/server.dir/src/onlineSrc/Bat.cpp.o CMakeFiles/server.dir/src/onlineSrc/GameScreen.cpp.o CMakeFiles/server.dir/src/onlineSrc/GameServer.cpp.o CMakeFiles/server.dir/src/onlineSrc/ServerGame.cpp.o CMakeFiles/server.dir/src/server/ClientSession.cpp.o CMakeFiles/server.dir/src/server/Message.cpp.o CMakeFiles/server.dir/src/server/Server.cpp.o CMakeFiles/server.dir/src/server/net_common.cpp.o CMakeFiles/server.dir/src/server/serverMain.cpp.o CMakeFiles/server.dir/src/testing/OnlineTest.cpp.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
+build server: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/ServerMain.cpp.o CMakeFiles/server.dir/src/Assets/Ball.cpp.o CMakeFiles/server.dir/src/Assets/Bat.cpp.o CMakeFiles/server.dir/src/Assets/GameState.cpp.o CMakeFiles/server.dir/src/Game.cpp.o CMakeFiles/server.dir/src/Screens/GameScreen.cpp.o CMakeFiles/server.dir/src/Screens/MainMenuScreen.cpp.o CMakeFiles/server.dir/src/Screens/PauseScreen.cpp.o CMakeFiles/server.dir/src/Screens/Screen.cpp.o CMakeFiles/server.dir/src/Screens/StartScreen.cpp.o CMakeFiles/server.dir/src/server/ClientSession.cpp.o CMakeFiles/server.dir/src/server/Message.cpp.o CMakeFiles/server.dir/src/server/Server.cpp.o CMakeFiles/server.dir/src/server/net_common.cpp.o CMakeFiles/server.dir/src/server/serverMain.cpp.o CMakeFiles/server.dir/src/testing/OnlineTest.cpp.o | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -Xlinker -framework -Xlinker OpenGL  -framework Cocoa  -framework IOKit  -framework CoreFoundation
   OBJECT_DIR = CMakeFiles/server.dir
