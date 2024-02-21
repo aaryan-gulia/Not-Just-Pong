@@ -27,8 +27,18 @@ void Game::runGame() {
         ClearBackground(WHITE);
 
         if(gameState == Play){
-            gameScreen.handleInput();
-            gameScreen.draw();
+            if(gameMode == Online){
+                if(!gameScreen.handleOnlineInput()) {
+                    gameState = MainMenu;
+                    gameScreen.reset();
+                }
+            }
+            else{
+                if(!gameScreen.handleInput()) {
+                    gameState = Pause;
+                    gameScreen.reset();
+                }
+            }
         }
         else if(gameState == Pause){
             pauseScreen.handleInput();

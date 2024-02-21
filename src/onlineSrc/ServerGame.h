@@ -1,6 +1,5 @@
 #include "server/olc_net.h"
-#include "GameScreen.h"
-#include "onlineSrc/Ball.h"
+#include "Assets/Bat.h"
 
 class ServerGame : public olc::net::server_interface<CustomMsgTypes> {
 public:
@@ -52,31 +51,44 @@ public:
         }
         else if (msg.header.id == CustomMsgTypes::Ready) {
             olc::net::message<CustomMsgTypes> gameState;
-            gameState.header.id = CustomMsgTypes::Wait;
-            gameState << bat1YPos << bat2YPos << ballXPos << ballYPos;
+            gameState.header.id = CustomMsgTypes::Ready;
+            std::cout << "Game is ready" << std::endl;
             MessageAllClients(gameState);
             return;
-
+        }
+        else if(msg.header.id == CustomMsgTypes::MakeNewGame){
+            olc::net::message<CustomMsgTypes> newMsg;
+            newMsg.header.id = CustomMsgTypes::Wait;
+            client->Send(newMsg);
+        }
+        else if(msg.header.id == CustomMsgTypes::JoinGame){
+            olc::net::message<CustomMsgTypes> newMsg;
+            newMsg.header.id = CustomMsgTypes::Ready;
+            std::cout<<"Game is ready"<<std::endl;
+            MessageAllClients(newMsg);
         }
         else if (msg.header.id == CustomMsgTypes::LookForGames) {
             std::cout << "Client looking for games" << std::endl;
             if (m_deqConnections.size()%2 == 1) {
                 std::cout << "No games found" << std::endl;
                 olc::net::message<CustomMsgTypes> newMsg;
-                newMsg.header.id = CustomMsgTypes::MakeNewGame;
+                newMsg.header.id = CustomMsgTypes::Wait;
                 std::cout << "Sending message " << int(newMsg.header.id) << std::endl;
                 client->Send(newMsg);
                 m_qMessagesIn.clear();
             } else {
                 std::cout << "Game found" << std::endl;
                 olc::net::message<CustomMsgTypes> newMsg;
-                newMsg.header.id = CustomMsgTypes::JoinGame;
+                newMsg.header.id = CustomMsgTypes::Wait;
                 std::cout << "Sending message " << int(newMsg.header.id) << std::endl;
                 client->Send(newMsg);
                 m_qMessagesIn.clear();
             }
         }else if (msg.header.id == CustomMsgTypes::Quit){
             m_deqConnections.erase(std::remove(m_deqConnections.begin(), m_deqConnections.end(), client), m_deqConnections.end());
+            olc::net::message<CustomMsgTypes> newMsg;
+            newMsg.header.id = CustomMsgTypes::Quit;
+            MessageAllClients(newMsg);
         }
     }
 };

@@ -20,16 +20,12 @@ bool PauseScreen::handleInput() {
         }
     }
     if (IsKeyPressed(KEY_ENTER)) {
-        if (options[selectedOption] == "Adjust Difficulty") {
-            state = "Menu";
-            return false;
-        }
-        else if(options[selectedOption]=="Resume"){
-            state = "Play";
+        if(options[selectedOption]=="Resume"){
+            gameState = Play;
             return false;
         }
         else if(options[selectedOption]=="Exit"){
-            state = "Restart";
+            gameState = MainMenu;
             return false;
         }
     }
